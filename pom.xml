@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.thinker</groupId>
-	<artifactId>service</artifactId>
+	<artifactId>thinker-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>service</name>
 	<description>在线咨询服务APP服务端</description>
