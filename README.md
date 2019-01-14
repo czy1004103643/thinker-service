@@ -1,2 +1,2 @@
 # thinker-service
-在线咨询服务APP
+在线咨询服务thinker
