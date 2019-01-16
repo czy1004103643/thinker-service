@@ -1,9 +1,11 @@
 package com.thinker.service.controller;
 
+import com.thinker.service.dao.TestMapper;
 import com.thinker.service.dto.*;
 import com.thinker.service.entity.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.annotations.Api;
@@ -19,16 +21,15 @@ import java.util.List;
 public class UserController {
     private static Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    //@Autowired
-    //private TestMapper testMapper;
+    @Autowired
+    private TestMapper testMapper;
 
     @ApiOperation("测试")
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String test() {
         Test test=new Test();
-        test.setId(1);
-        test.setName("gaopeng");
-        //testMapper.insert(test);
+        test.setName("testtest");
+        testMapper.insert(test);
         return "ok";
     }
 
