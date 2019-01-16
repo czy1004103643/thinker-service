@@ -25,19 +25,55 @@ public class ServiceController {
     @PostMapping(value = "/getCategoryList")
     public BaseResponseDTO getCategoryList() {
         List<CategoryDTO> list=new ArrayList<>();
-        CategoryDTO dto=new CategoryDTO();
-        dto.setCategory_id(1);
-        dto.setCategory_image("http://hangzhou.oss.com/image/wewq73423w217ydwer.jpeg");
-        dto.setCategory_name("系统架构");
 
-        list.add(dto);
-        list.add(dto);
-        list.add(dto);
-        list.add(dto);
-        list.add(dto);
-        list.add(dto);
-        list.add(dto);
-        list.add(dto);
+        CategoryDTO dto1=new CategoryDTO();
+        dto1.setCategory_id(1);
+        dto1.setCategory_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/c1.png");
+        dto1.setCategory_name("系统架构");
+
+        CategoryDTO dto2=new CategoryDTO();
+        dto2.setCategory_id(2);
+        dto2.setCategory_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/c2.png");
+        dto2.setCategory_name("技术开发");
+
+        CategoryDTO dto3=new CategoryDTO();
+        dto3.setCategory_id(3);
+        dto3.setCategory_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/c3.png");
+        dto3.setCategory_name("研发流程");
+
+        CategoryDTO dto4=new CategoryDTO();
+        dto4.setCategory_id(4);
+        dto4.setCategory_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/c4.png");
+        dto4.setCategory_name("人工智能");
+
+        CategoryDTO dto5=new CategoryDTO();
+        dto5.setCategory_id(5);
+        dto5.setCategory_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/c5.png");
+        dto5.setCategory_name("产品设计");
+
+        CategoryDTO dto6=new CategoryDTO();
+        dto6.setCategory_id(6);
+        dto6.setCategory_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/c6.png");
+        dto6.setCategory_name("产品运营");
+
+        CategoryDTO dto7=new CategoryDTO();
+        dto7.setCategory_id(7);
+        dto7.setCategory_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/c7.png");
+        dto7.setCategory_name("人才招聘");
+
+        CategoryDTO dto8=new CategoryDTO();
+        dto8.setCategory_id(8);
+        dto8.setCategory_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/c8.png");
+        dto8.setCategory_name("团队管理");
+
+        list.add(dto1);
+        list.add(dto2);
+        list.add(dto3);
+        list.add(dto4);
+        list.add(dto5);
+        list.add(dto6);
+        list.add(dto7);
+        list.add(dto8);
         return BaseResponseDTO.successInstance(list);
     }
 
@@ -165,23 +201,46 @@ public class ServiceController {
     @PostMapping(value = "/getCommentList")
     public BaseResponseDTO getCommentList(@RequestBody RequestCommentListDTO CommentListDTO) {
         CommentListDTO CommentList=new CommentListDTO();
-        CommentDTO Comment=new CommentDTO();
-        Comment.setUser_userid(100000000);
-        Comment.setUser_name("张三");
-        Comment.setUser_nickname("令狐冲");
-        Comment.setUser_head_image("http://hangzhou.oss.com/image/wewq73423w217ydwer.jpeg");
-        Comment.setExpert_userid(200000000);
-        Comment.setExpert_name("李四");
-        Comment.setExpert_nickname("多隆");
-        Comment.setExpert_head_image("http://hangzhou.oss.com/image/wewq73423w217ydwer.jpeg");
-        Comment.setComment("这个专家很牛，技术很强，讲解透彻");
+
+        CommentDTO Comment1=new CommentDTO();
+        Comment1.setUser_userid(100000000);
+        Comment1.setUser_name("黄江");
+        Comment1.setUser_nickname("令狐冲");
+        Comment1.setUser_head_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/head1.png");
+        Comment1.setExpert_userid(200000000);
+        Comment1.setExpert_name("张成");
+        Comment1.setExpert_nickname("多隆");
+        Comment1.setExpert_head_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/head2.png");
+        Comment1.setComment("这个专家很牛，技术很强，讲解透彻");
+
+        CommentDTO Comment2=new CommentDTO();
+        Comment2.setUser_userid(100000000);
+        Comment2.setUser_name("陈伟");
+        Comment2.setUser_nickname("风清扬");
+        Comment2.setUser_head_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/head3.png");
+        Comment2.setExpert_userid(200000000);
+        Comment2.setExpert_name("彭甲");
+        Comment2.setExpert_nickname("小甲子");
+        Comment2.setExpert_head_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/head4.png");
+        Comment2.setComment("这个专家很牛，技术很强，讲解透彻");
+
+        CommentDTO Comment3=new CommentDTO();
+        Comment3.setUser_userid(100000000);
+        Comment3.setUser_name("王成");
+        Comment3.setUser_nickname("宋江");
+        Comment3.setUser_head_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/head5.png");
+        Comment3.setExpert_userid(200000000);
+        Comment3.setExpert_name("雷军");
+        Comment3.setExpert_nickname("雷老板");
+        Comment3.setExpert_head_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/head6.png");
+        Comment3.setComment("这个专家很牛，技术很强，讲解透彻");
+
+
         List<CommentDTO> list=new ArrayList<>();
-        list.add(Comment);
-        list.add(Comment);
-        list.add(Comment);
-        list.add(Comment);
-        list.add(Comment);
-        CommentList.setTotal(5);
+        list.add(Comment1);
+        list.add(Comment2);
+        list.add(Comment3);
+        CommentList.setTotal(3);
         CommentList.setCommentlist(list);
 
         return BaseResponseDTO.successInstance(CommentList);

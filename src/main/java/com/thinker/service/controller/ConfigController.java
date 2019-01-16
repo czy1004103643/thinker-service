@@ -28,14 +28,24 @@ public class ConfigController {
         ConfigDTO Config=new ConfigDTO();
 
         List<AdDTO> adlist=new ArrayList<>();
-        AdDTO ad=new AdDTO();
-        ad.setAd_describe("轮播广告");
-        ad.setAd_image("http://hangzhou.oss.com/image/wewq73423w217ydwer.jpeg");
-        ad.setAd_link("http://www.163.com");
-        adlist.add(ad);
-        adlist.add(ad);
-        adlist.add(ad);
-        adlist.add(ad);
+        AdDTO ad1=new AdDTO();
+        ad1.setAd_describe("轮播广告");
+        ad1.setAd_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/I1.png");
+        ad1.setAd_link("http://www.163.com");
+
+        AdDTO ad2=new AdDTO();
+        ad2.setAd_describe("轮播广告");
+        ad2.setAd_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/I2.png");
+        ad2.setAd_link("http://www.163.com");
+
+        AdDTO ad3=new AdDTO();
+        ad3.setAd_describe("轮播广告");
+        ad3.setAd_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/I3.png");
+        ad3.setAd_link("http://www.163.com");
+
+        adlist.add(ad3);
+        adlist.add(ad3);
+        adlist.add(ad3);
         Config.setAdlist(adlist);
         return BaseResponseDTO.successInstance(Config);
     }
