@@ -6,15 +6,15 @@ import java.util.List;
 public class AppointmentTimeDTO implements Serializable{
     private static final long serialVersionUID = 1L;
 
-    private String date;
+    private int date;
     private int week;
-    private List<TimesDTO> times;
+    private List<Integer> times;
 
-    public String getDate() {
+    public int getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(int date) {
         this.date = date;
     }
 
@@ -26,11 +26,11 @@ public class AppointmentTimeDTO implements Serializable{
         this.week = week;
     }
 
-    public List<TimesDTO> getTimes() {
+    public List<Integer> getTimes() {
         return times;
     }
 
-    public void setTimes(List<TimesDTO> times) {
+    public void setTimes(List<Integer> times) {
         this.times = times;
     }
 
