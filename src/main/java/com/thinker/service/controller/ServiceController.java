@@ -233,4 +233,75 @@ public class ServiceController {
 
         return BaseResponseDTO.successInstance(CommentList);
     }
+
+    @ApiOperation("用户个人中心")
+    @PostMapping(value = "/user/MyCenter")
+    public BaseResponseDTO userMyCenter() {
+        UserMyCenterDTO userMyCenterDTO=new UserMyCenterDTO();
+        userMyCenterDTO.setUserid(100000000);
+        userMyCenterDTO.setName("张三");
+        userMyCenterDTO.setNickname("令狐冲");
+        userMyCenterDTO.setHead_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/head6.png");
+        userMyCenterDTO.setPosition("阿里资深架构师");
+        userMyCenterDTO.setOld_position("百度技术经理");
+        userMyCenterDTO.setService_times(250);
+        userMyCenterDTO.setBalance(320);
+        userMyCenterDTO.setService_card(3);
+        userMyCenterDTO.setCoupon(8);
+        userMyCenterDTO.setService_appointment(32);
+        userMyCenterDTO.setService_complete(20);
+        userMyCenterDTO.setService_evaluate(12);
+        userMyCenterDTO.setCollect_expert(12);
+        return BaseResponseDTO.successInstance(userMyCenterDTO);
+    }
+
+    @ApiOperation("专家个人中心")
+    @PostMapping(value = "/expert/MyCenter")
+    public BaseResponseDTO expertMyCenter() {
+        ExpertMyCenterDTO expertMyCenterDTO=new ExpertMyCenterDTO();
+        expertMyCenterDTO.setUserid(100000000);
+        expertMyCenterDTO.setName("张三");
+        expertMyCenterDTO.setNickname("令狐冲");
+        expertMyCenterDTO.setHead_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/head6.png");
+        expertMyCenterDTO.setPosition("阿里资深架构师");
+        expertMyCenterDTO.setOld_position("百度技术经理");
+        expertMyCenterDTO.setService_times(250);
+        expertMyCenterDTO.setBalance(320);
+        expertMyCenterDTO.setGood_comment(3);
+        expertMyCenterDTO.setCoupon(8);
+        expertMyCenterDTO.setService_appointment(32);
+        expertMyCenterDTO.setService_complete(20);
+        expertMyCenterDTO.setService_evaluate(12);
+        expertMyCenterDTO.setCollect_expert(12);
+        return BaseResponseDTO.successInstance(expertMyCenterDTO);
+    }
+
+    @ApiOperation("获取用户咨询列表")
+    @PostMapping(value = "/getServiceList")
+    public BaseResponseDTO getServiceList(@RequestBody RequestServiceListDTO ServiceListDTO) {
+        ServiceListDTO serviceListDTO=new ServiceListDTO();
+        serviceListDTO.setTotal(2);
+        ServiceDTO serviceDTO1=new ServiceDTO();
+        serviceDTO1.setAppointment_id(1);
+        serviceDTO1.setAppointment_time("2019-01-22 09:00");
+        serviceDTO1.setExpert_head_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/head6.png");
+        serviceDTO1.setExpert_name("李四");
+        serviceDTO1.setExpert_nickname("多隆");
+        serviceDTO1.setExpert_userid(10000000);
+
+        ServiceDTO serviceDTO2=new ServiceDTO();
+        serviceDTO2.setAppointment_id(2);
+        serviceDTO2.setAppointment_time("2019-02-12 09:00");
+        serviceDTO2.setExpert_head_image("http://thinkerosstest.oss-cn-shanghai-finance-1-pub.aliyuncs.com/head3.png");
+        serviceDTO2.setExpert_name("张三");
+        serviceDTO2.setExpert_nickname("张三峰");
+        serviceDTO2.setExpert_userid(20000000);
+
+        List<ServiceDTO> list=new ArrayList<>();
+        list.add(serviceDTO1);
+        list.add(serviceDTO2);
+        serviceListDTO.setServicelist(list);
+
+        return BaseResponseDTO.successInstance(serviceListDTO);
+    }
 }
